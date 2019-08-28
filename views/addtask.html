@@ -1,0 +1,30 @@
+<html>
+
+<body>
+
+        <head>
+                <link rel="stylesheet" href="styles.css">
+
+                <style>
+                        a {
+                            font-size:25px;
+                            font-weight:bold;
+                        }
+                </style>
+
+        </head>
+
+        <a href="/">Home</a> 
+        <a href="/listtasks">List Tasks</a> <br /><br />
+
+  <form action="addnewtask" method="POST">
+    Task Name <input type="text" name="taskName" /> <br />
+    Task Due (dd/mm/yyyy) <input type="text" name="taskDueDate" /> <br />
+    Task Desc <input type="text" name="taskDesc" /><br /><br />
+    <button>Submit</button>
+  
+  </form>
+
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!-- <html>
+
+<style>
+    table {
+        width: 100%;
+    }
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    th,
+    td {
+        padding: 15px;
+        text-align: left;
+    }
+    table#t01 tr:nth-child(even) {
+        background-color: #eee;
+    }
+    table#t01 tr:nth-child(odd) {
+        background-color: #fff;
+    }
+    table#t01 th {
+        background-color: black;
+        color: white;
+    }
+</style>
+
+<body>
+    
+        <a href="/">Home</a> 
+        <a href="/newtask">Add new Task</a> <br /><br />
+
+    <table id="t01">
+
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Due Date
+            </th>
+            <th>
+                Description
+            </th>
+        </tr>
+        
+        <% for(let i=0;i<tasks.length;i++){ %>
+        <tr>
+            <td>
+                <%= tasks[i].taskName %>
+            </td>
+            <td>
+                <%= tasks[i].taskDueDate %>
+            </td>
+            <td>
+                <%= tasks[i].taskDesc %>
+            </td>
+        </tr>
+        <%  } %>
+
+    </table>
+
+</body>
+
+</html> -->
+
+
+
+
+
+<!-- note below is alternative way to display the table - more simple and is what is required as per lab instructions -->
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        table,th,td {
+            border: 1px solid black;
+        }
+        a {
+            font-size:25px;
+            font-weight:bold;
+        }
+    </style>
+</head>
+
+<body>
+
+        <a href="/">Home</a> 
+        <a href="/newtask">Add new Task</a> <br /><br/></br>
+
+    <h1>
+        <table>
+            <tr>
+                <td>Name</td>
+                <td>Due Date</td>
+                <td>Description</td>
+            </tr>
+
+            <% for ( var i =0; i< tasks.length;i++){ %>
+                <tr>
+                    <td>
+                        <%= tasks[i].taskName %>
+                    </td>
+                    <td>
+                        <%= tasks[i].taskDueDate %>
+                    </td>
+                    <td>
+                        <%= tasks[i].taskDesc %>
+                    </td>
+                </tr>
+
+                <%   }  %>
+    </h1>
+
+</body>
+
+</html>
+
+
