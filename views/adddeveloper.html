@@ -15,20 +15,22 @@
         </head>
 
         <a href="/">Home</a> 
-        <a href="/adddeveloper">Add new Developer</a> 
+        <a href="/addtask">Add new Task</a> 
         <a href="/deletetask">Delete Task</a> 
         <a href="/deletecompletedtasks">Delete Completed Tasks</a> 
         <a href="/updatetask">Update Task Status</a>
         <a href="/alldevelopers">List Developers</a> 
         <a href="/listtasks">List Tasks</a> 
-        
 
-  <form action="addnewtask" method="POST">
-    Task Name <input type="text" name="tName" /> <br />
-    Assign to <input type="text" name="assignTo" /> <br />
-    Task Due (dd/mm/yyyy) <input type="date" name="tDueDate" /> <br />
-    Task Status <input type="text" name="tStatus" /> <br />
-    Task Desc <input type="text" name="tDesc" /><br /><br />
+  <form action="addnewdeveloper" method="POST">
+    First Name <input type="text" name="fName" /> <br />
+    Last Name <input type="text" name="lName" /> <br />
+    Level <input type="text" name="level" /> <br />
+    State <input type="text" name="state" /><br />
+    Suburb <input type="text" name="suburb" /><br />
+    Street <input type="text" name="street" /><br />
+    Unit <input type="text" name="unit" /><br />
+
     <button>Submit</button>
   
   </form>

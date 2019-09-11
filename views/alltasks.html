@@ -91,27 +91,32 @@
 <body>
 
         <a href="/">Home</a> 
-        <a href="/newtask">Add new Task</a> <br /><br/></br>
+        <a href="/adddeveloper">Add new Developer</a> 
+        <a href="/addtask">Add new Task</a> 
+        <a href="/deletetask">Delete Task</a>
+        <a href="/deletecompletedtasks">Delete Completed Tasks</a>
+        <a href="/updatetask">Update Task Status</a> 
+        <a href="/alldevelopers">List Developers</a> 
 
     <h1>
         <table>
             <tr>
+                <td>Task ID</td>
                 <td>Name</td>
+                <td>Assign To (Developer ID)</td>
                 <td>Due Date</td>
-                <td>Description</td>
+                <td>Task Status</td>
+                <td>Task Description</td>
             </tr>
 
             <% for ( var i =0; i< tasks.length;i++){ %>
                 <tr>
-                    <td>
-                        <%= tasks[i].taskName %>
-                    </td>
-                    <td>
-                        <%= tasks[i].taskDueDate %>
-                    </td>
-                    <td>
-                        <%= tasks[i].taskDesc %>
-                    </td>
+                    <td> <%= tasks[i]._id %></td>
+                    <td> <%= tasks[i].name %></td>
+                    <td> <%= tasks[i].assignTo %></td>
+                    <td><%= tasks[i].dueDate %></td>
+                    <td><%= tasks[i].status %></td>
+                    <td><%= tasks[i].description %></td>
                 </tr>
 
                 <%   }  %>
