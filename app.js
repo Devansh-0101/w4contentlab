@@ -77,7 +77,7 @@ app.post("/addnewdeveloper", function(req,res){
     newDev.save(function (err) {
         if (err) throw err;
         else {
-            res.redirect('/');
+            res.redirect('/alldevelopers'); 
             console.log('Developer successfully Added to DB');
         }
     });
@@ -191,6 +191,20 @@ app.post('/updatetask',function(req,res){
         console.log('error', error);
         res.send(error);
     }});
+});
+
+app.get('/:oldfirstname/:newfirstname',function(req,res){
+    
+    Developer.updateMany({ 'name.firstName': req.params.oldfirstname}, { $set: { 'name.firstName': req.params.newfirstname } }, function (err, doc) {
+        if(!err){   
+            console.log(doc);
+            res.redirect('/listtasks');
+        } else {
+            console.log('error', error);
+            res.send(error);
+        }
+    });
+
 });
 
 app.listen(8080);
